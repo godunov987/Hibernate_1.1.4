@@ -24,8 +24,6 @@ public class UserDaoJDBCImpl implements UserDao {
                     lastName VARCHAR(20),
                     age INT)""";
             statement.executeUpdate(sql2);
-var name = "fwawcac";
-
         } catch (SQLException e) {
         }
     }
@@ -72,7 +70,7 @@ var name = "fwawcac";
                 String name = resultSet.getString("name");
                 String lastName = resultSet.getString("lastName");
                 byte age = resultSet.getByte("age");
-                animals.add(new User(id, name, lastName, age));
+                animals.add(new User(name, lastName, age));
             }
         } catch (SQLException e) {}
         return animals;
